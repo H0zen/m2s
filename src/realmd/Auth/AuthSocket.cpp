@@ -695,7 +695,6 @@ bool AuthSocket::_HandleLogonProof()
         // No SQL injection (escaped user name) and IP address as received by socket
         const unsigned char* K_hex = K.AsHexStr();
         LoginDatabase.PExecute("UPDATE `account` SET `sessionkey` = '%s', `last_ip` = '%s', `last_login` = NOW(), `locale` = '%u', `os` = '%s', `failed_logins` = 0 WHERE `username` = '%s'", K_hex, get_remote_address().c_str(), GetLocaleByName(_localizationName), _os.c_str(), _safelogin.c_str());
-  
 
         ///- Finish SRP6 and send the final result to the client
         sha.Initialize();

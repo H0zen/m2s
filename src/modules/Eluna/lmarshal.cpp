@@ -566,10 +566,10 @@ int mar_clone(lua_State* L)
 
 static const luaL_Reg R[] =
 {
-    {"encode",      mar_encode},
-    {"decode",      mar_decode},
-    {"clone",       mar_clone},
-    {NULL,	    NULL}
+    {"encode", mar_encode},
+    {"decode", mar_decode},
+    {"clone",  mar_clone},
+    {NULL,     NULL}
 };
 
 int luaopen_marshal(lua_State *L)

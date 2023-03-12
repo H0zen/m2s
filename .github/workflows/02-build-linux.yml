@@ -19,7 +19,7 @@ jobs:
         run: sudo apt-get install -y git make cmake clang libbz2-dev build-essential default-libmysqlclient-dev
 
       - name: Update Compilers
-        run: source ci-compiler-update.sh
+        run: source ./.github/workflows/ci-compiler-update.sh
 
       - name: Build Mangos Project
-        run: source ci-compile.sh
+        run: source ./.github/workflows/ci-compile.sh

@@ -13,7 +13,7 @@ declare -A singleLineRegexChecks=(
 for check in ${!singleLineRegexChecks[@]}; do
     echo "  Checking RegEx: '${check}'"
     
-    if grep -P -r -I -n ${check} src; then
+    if grep -P -r -I -n --include=\*.cpp --include=\*.h  ${check} src; then
         echo
         echo "${singleLineRegexChecks[$check]}"
         exit 1

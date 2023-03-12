@@ -23,6 +23,7 @@
  */
 
 #include "ace/OS_NS_sys_stat.h"
+#include <cstring>
 #include "ExtractorCommon.h"
 
 /**
